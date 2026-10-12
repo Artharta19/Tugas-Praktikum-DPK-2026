@@ -66,3 +66,38 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Compiled executables
+*.exe
+*.out
+a.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Debug and compiler-generated files
+*.pdb
+*.ilk
+*.idb
+*.gch
+*.pch
+
+# Build directories
+build/
+cmake-build-*/
+Debug/
+Release/
+x64/
+x86/
+
+# IDE-generated files
+.vs/
