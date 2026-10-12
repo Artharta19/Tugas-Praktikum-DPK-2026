@@ -43,5 +43,5 @@ int main() {
     cout << data[i] << " ";
   } */
   cout << "Data Terbesar Adalah: " << cari_terbesar(data, jumlah_data);
-  cout << "Data Terkecil Adalah: " << cari_terkecil(data, jumlah_data);
+  cout << "\nData Terkecil Adalah: " << cari_terkecil(data, jumlah_data);
 }

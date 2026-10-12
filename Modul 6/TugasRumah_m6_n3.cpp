@@ -1,58 +1,49 @@
 #include <iostream>
-#include <map>
-
 using namespace std;
 
-// Fungsi untuk mencari data yang paling sering diinputkan (modus)
-int cariDataSering(const map<int, int> &frekuensi) {
-  int dataTerbanyak = 0;
-  int frekuensiMaks = 0;
+// Fungsi untuk mencari data yang paling sering muncul
+int cariModus(int data[], int n) {
+  int modus = data[0];
+  int terbanyak = 0;
 
-  for (auto const &[data, jumlah] : frekuensi) {
-    if (jumlah > frekuensiMaks) {
-      frekuensiMaks = jumlah;
-      dataTerbanyak = data;
+  for (int i = 0; i < n; i++) {
+    int jumlah = 0;
+    for (int j = 0; j < n; j++) {
+      if (data[j] == data[i]) {
+        jumlah++;
+      }
+    }
+    if (jumlah > terbanyak) {
+      terbanyak = jumlah;
+      modus = data[i];
     }
   }
-  return dataTerbanyak;
+  return modus;
 }
 
 int main() {
-  map<int, int> frekuensiData; // key: angka input, value: frekuensi kemunculan
-  char ulang;
-  int inputVal;
+  int data[100];
+  int n = 0;
+  char lagi;
 
-  cout << "------------------------------------------------------------------"
-       << endl;
-  cout << "                        MODUL FUNCTION                            "
-       << endl;
-  cout << "------------------------------------------------------------------"
-       << endl;
-  cout << "              MENENTUKAN DATA YANG SERING DIINPUTKAN              "
-       << endl;
-  cout << "------------------------------------------------------------------"
-       << endl;
+  cout << "----------------------------------------------------" << "\n";
+  cout << "                   MODUL FUNCTION" << "\n";
+  cout << "----------------------------------------------------" << "\n";
+  cout << "        MENENTUKAN DATA YANG SERING DIINPUTKAN" << "\n";
+  cout << "----------------------------------------------------" << "\n";
 
   do {
-    cout << "Maskkan data : ";
-    cin >> inputVal;
-
-    // Menambahkan frekuensi kemunculan data
-    frekuensiData[inputVal]++;
-
+    cout << "Masukkan data : ";
+    cin >> data[n];
+    n++;
     cout << "Masukkan Data Lagi?(y/n) : ";
-    cin >> ulang;
-  } while (ulang == 'y' || ulang == 'Y');
+    cin >> lagi;
+  } while (lagi == 'y' && n < 100);
 
-  if (!frekuensiData.empty()) {
-    int hasil = cariDataSering(frekuensiData);
-
-    cout << "------------------------------------------------------------------"
-         << endl;
-    cout << "Data yang sering diinputkan adalah " << hasil << endl;
-    cout << "------------------------------------------------------------------"
-         << endl;
-  }
+  cout << "\n";
+  cout << "----------------------------------------------------" << "\n";
+  cout << "Data yang sering diinputkan adalah " << cariModus(data, n) << "\n";
+  cout << "----------------------------------------------------" << "\n";
 
   return 0;
 }
