@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
   void *p_void;
+  int hool = 98;
 
   float var_f = 3.9;
   p_void = &var_f;
