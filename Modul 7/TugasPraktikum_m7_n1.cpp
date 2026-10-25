@@ -8,9 +8,17 @@ int main() {
   cout << "Masukan kalimat Yang akan dibalik: ";
   cin.getline(katadoksli, batas_arr);
 
-  int panjang_kata = 0;
-  while (katadoksli[panjang_kata] != '\0') {
-    panjang_kata++;
+  int raw_panjang_kata = 0;
+  while (katadoksli[raw_panjang_kata] != '\0') {
+    raw_panjang_kata++;
   }
-  cout << panjang_kata;
+  int panjang_kata = raw_panjang_kata + 1;
+
+  for (int i = 0; i <= panjang_kata; i++) {
+    char *temp = &katadoksli[panjang_kata - i];
+    kataterbalik[i] = *temp;
+  }
+  for (int i = 0; i <= panjang_kata; i++) {
+    cout << kataterbalik[i];
+  }
 }
