@@ -2,16 +2,16 @@
 using namespace std;
 
 void KapitalinHurufPertama(char *str) {
-  bool newWord = true; /* flag: 1 = posisi ini adalah awal kata */
+  bool newWord = true;
 
   while (*str != '\0') {
     if (*str == ' ') {
-      newWord = true; /* spasi -> kata berikutnya dimulai */
+      newWord = true;
     } else if (newWord) {
-      *str = toupper(*str); /* ubah huruf lewat pointer */
+      *str = toupper(*str);
       newWord = false;
     }
-    str++; /* geser pointer ke karakter berikutnya */
+    str++;
   }
 }
 

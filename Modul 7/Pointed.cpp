@@ -2,15 +2,8 @@
 using namespace std;
 
 int main() {
-  void *p_void;
-  int hool = 98;
 
-  float var_f = 3.9;
-  p_void = &var_f;
-
-  cout << "Nilai Variable = " << var_f << endl;
-
-  *(float *)p_void = 7.8;
-
-  cout << "Nilai Ubah Variable = " << var_f;
+  int holly[2] = {9, 13};
+  cout << &holly[0] + 1 << endl;
+  cout << &holly[1];
 }
