@@ -1,6 +1,6 @@
 ; loop.asm
 section .data
-    pesan dw "Iwak tempe", 0xd
+    pesan dw "Emang", 0xd
     pesanlen equ $ - pesan
 
 section .bss
@@ -9,7 +9,7 @@ section .text
     global _start
 
 _start:
-    mov rax, 1          ; loop counter
+    mov rax, 1          
     mov rdi, 1
     mov rsi, pesan
     mov rdx, pesanlen
