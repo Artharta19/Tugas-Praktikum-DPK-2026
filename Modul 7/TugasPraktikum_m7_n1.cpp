@@ -15,7 +15,7 @@ int main() {
   int panjang_kata = raw_panjang_kata + 1;
 
   for (int i = 0; i <= panjang_kata; i++) {
-    char *temp = &katadoksli[panjang_kata - i];
+    char *temp = &katadoksli[panjang_kata - 1 - i];
     kataterbalik[i] = *temp;
   }
   for (int i = 0; i <= panjang_kata; i++) {

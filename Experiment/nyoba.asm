@@ -1,7 +1,7 @@
 ; loop.asm
 section .data
     pesan dw "Emang", 0xd
-    pesanlen equ $ - pesan
+    pesanlen equ $ - pesanw
 
 section .bss
 
